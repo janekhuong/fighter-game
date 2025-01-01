@@ -50,7 +50,7 @@ A pixel-art styled 2-player fighting game built using JavaScript and HTML5 Canva
 
 ## Acknowledgements
 
-This project was created with the help of a tutorial by Chris Courses on YouTube. Check out the original video [here](https://www.youtube.com/user/chriscourses) for more insights and guidance.
+This project was created with the help of a tutorial by Chris Courses on YouTube. Check out the original video [here](https://www.youtube.com/watch?v=vyqbNFMDRGQ) for more insights and guidance.
 
 ## Screenshot
 
