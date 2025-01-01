@@ -36,11 +36,11 @@ A pixel-art styled 2-player fighting game built using JavaScript and HTML5 Canva
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/2-player-fighter-game.git
+   git clone https://github.com/janekhuong/fighter-game.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd 2-player-fighter-game
+   cd fighter-game
    ```
 3. Open `index.html` in your browser.
 
@@ -52,13 +52,13 @@ A pixel-art styled 2-player fighting game built using JavaScript and HTML5 Canva
 
 ## Acknowledgements
 
-This project was created with the help of a tutorial by Chris Courses on YouTube. Check out the original video [here](https://www.youtube.com/watch?v=vyqbNFMDRGQ) for more insights and guidance.
+This project was created with the help of a tutorial by Chris Courses on YouTube. Check out the original video [here](https://www.youtube.com/watch?v=vyqbNFMDRGQ).
 
 ## Future Enhancements
 
-- Add more characters with unique abilities.
-- Introduce special moves and combos.
-- Implement AI for single-player mode.
-- Add background music and sound effects.
-- Expand the environment with additional stages.
+- Add more characters with unique abilities
+- Introduce special moves and combos
+- Implement AI for single-player mode
+- Add background music and sound effects
+- Expand the environment with additional stages
 
