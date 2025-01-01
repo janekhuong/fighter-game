@@ -54,7 +54,7 @@ This project was created with the help of a tutorial by Chris Courses on YouTube
 
 ## Screenshot
 
-![Game Screenshot](./assets/screenshot.png)
+![Game Screenshot](./img/fighter-game-screenshot.png)
 
 ## Future Enhancements
 
