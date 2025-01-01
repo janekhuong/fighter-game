@@ -2,6 +2,8 @@
 
 A pixel-art styled 2-player fighting game built using JavaScript and HTML5 Canvas. The game features a vibrant setting, dynamic character animations, and exciting combat mechanics. This is a fun project that brings local multiplayer fighting to your browser.
 
+![Game Screenshot](./img/fighter-game-screenshot.png)
+
 ## Features
 
 - **Two Unique Characters**: Each player can control a distinct fighter with unique designs.
@@ -51,10 +53,6 @@ A pixel-art styled 2-player fighting game built using JavaScript and HTML5 Canva
 ## Acknowledgements
 
 This project was created with the help of a tutorial by Chris Courses on YouTube. Check out the original video [here](https://www.youtube.com/watch?v=vyqbNFMDRGQ) for more insights and guidance.
-
-## Screenshot
-
-![Game Screenshot](./img/fighter-game-screenshot.png)
 
 ## Future Enhancements
 
