@@ -1,6 +1,6 @@
 # 2-Player Fighter Game
 
-![Game Screenshot](./img/fighter-game-screenshot)
+![Game Screenshot](./img/fighter-game-screenshot.png)
 
 A pixel-art styled 2-player fighting game built using JavaScript and HTML5 Canvas. The game features a battle setting, dynamic character animations, and combat mechanics. 
 
