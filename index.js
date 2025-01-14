@@ -16,19 +16,9 @@ const background = new Sprite({
   imageSrc: "./img/background.png",
 });
 
-const shop = new Sprite({
-  position: {
-    x: 600,
-    y: 128,
-  },
-  imageSrc: "./img/shop.png",
-  scale: 2.75,
-  framesMax: 6,
-});
-
 const player = new Fighter({
   position: {
-    x: 0,
+    x: 180,
     y: 0,
   },
   velocity: {
@@ -39,41 +29,41 @@ const player = new Fighter({
     x: 0,
     y: 0,
   },
-  imageSrc: "./img/samuraiMack/Idle.png",
-  framesMax: 8,
+  imageSrc: "./img/player1/idle1.png",
+  framesMax: 5,
   scale: 2.5,
   offset: {
-    x: 215,
-    y: 157,
+    x: 0,
+    y: -17,
   },
   sprites: {
     idle: {
-      imageSrc: "./img/samuraiMack/Idle.png",
-      framesMax: 8,
+      imageSrc: "./img/player1/idle1.png",
+      framesMax: 5,
     },
     run: {
-      imageSrc: "./img/samuraiMack/Run.png",
-      framesMax: 8,
+      imageSrc: "./img/player1/run1.png",
+      framesMax: 7,
     },
     jump: {
-      imageSrc: "./img/samuraiMack/Jump.png",
+      imageSrc: "./img/player1/jump1.png",
       framesMax: 2,
     },
     fall: {
-      imageSrc: "./img/samuraiMack/Fall.png",
-      framesMax: 2,
+      imageSrc: "./img/player1/fall1.png",
+      framesMax: 1,
     },
     attack1: {
-      imageSrc: "./img/samuraiMack/Attack1.png",
-      framesMax: 6,
+      imageSrc: "./img/player1/attack1.png",
+      framesMax: 5,
     },
     takeHit: {
-      imageSrc: "./img/samuraiMack/Take Hit - white silhouette.png",
-      framesMax: 4,
+      imageSrc: "./img/player1/hit1.png",
+      framesMax: 5,
     },
     death: {
-      imageSrc: "./img/samuraiMack/Death.png",
-      framesMax: 6,
+      imageSrc: "./img/player1/death1.png",
+      framesMax: 5,
     },
   },
   attackBox: {
@@ -88,8 +78,8 @@ const player = new Fighter({
 
 const enemy = new Fighter({
   position: {
-    x: 400,
-    y: 100,
+    x: 700,
+    y: 0,
   },
   velocity: {
     x: 0,
@@ -100,41 +90,41 @@ const enemy = new Fighter({
     x: -50,
     y: 0,
   },
-  imageSrc: "./img/kenji/Idle.png",
-  framesMax: 4,
+  imageSrc: "./img/player2/idle2.png",
+  framesMax: 5,
   scale: 2.5,
   offset: {
-    x: 215,
-    y: 167,
+    x: 0,
+    y: -17,
   },
   sprites: {
     idle: {
-      imageSrc: "./img/kenji/Idle.png",
-      framesMax: 4,
+      imageSrc: "./img/player2/idle2.png",
+      framesMax: 5,
     },
     run: {
-      imageSrc: "./img/kenji/Run.png",
-      framesMax: 8,
+      imageSrc: "./img/player2/run2.png",
+      framesMax: 7,
     },
     jump: {
-      imageSrc: "./img/kenji/Jump.png",
+      imageSrc: "./img/player2/jump2.png",
       framesMax: 2,
     },
     fall: {
-      imageSrc: "./img/kenji/Fall.png",
-      framesMax: 2,
+      imageSrc: "./img/player2/fall2.png",
+      framesMax: 1,
     },
     attack1: {
-      imageSrc: "./img/kenji/Attack1.png",
+      imageSrc: "./img/player2/attack2.png",
       framesMax: 4,
     },
     takeHit: {
-      imageSrc: "./img/kenji/Take hit.png",
-      framesMax: 3,
+      imageSrc: "./img/player2/hit2.png",
+      framesMax: 5,
     },
     death: {
-      imageSrc: "./img/kenji/Death.png",
-      framesMax: 7,
+      imageSrc: "./img/player2/death2.png",
+      framesMax: 5,
     },
   },
   attackBox: {
@@ -172,7 +162,6 @@ function animate() {
   c.fillStyle = "black";
   c.fillRect(0, 0, canvas.width, canvas.height);
   background.update();
-  shop.update();
   c.fillStyle = "rgba(255, 255, 255, 0.15)";
   c.fillRect(0, 0, canvas.width, canvas.height);
   player.update();
@@ -188,7 +177,6 @@ function animate() {
   } else if (keys.d.pressed && player.lastKey == "d") {
     player.velocity.x = 5;
     player.switchSprite("run");
-    wd;
   } else {
     player.switchSprite("idle");
   }
@@ -196,7 +184,7 @@ function animate() {
   // jumping
   if (player.velocity.y < 0) {
     player.switchSprite("jump");
-  } else if (player.velocity > 0) {
+  } else if (player.velocity.y > 0) {
     player.switchSprite("fall");
   }
 
@@ -213,7 +201,7 @@ function animate() {
 
   if (enemy.velocity.y < 0) {
     enemy.switchSprite("jump");
-  } else if (enemy.velocity > 0) {
+  } else if (enemy.velocity.y > 0) {
     enemy.switchSprite("fall");
   }
 
@@ -279,7 +267,9 @@ window.addEventListener("keydown", (event) => {
         player.lastKey = "a";
         break;
       case "w":
-        player.velocity.y = -20;
+        if (player.velocity.y === 0) {
+          player.velocity.y = -17;
+        }
         break;
       case " ":
         player.attack();
@@ -297,7 +287,9 @@ window.addEventListener("keydown", (event) => {
         enemy.lastKey = "ArrowLeft";
         break;
       case "ArrowUp":
-        enemy.velocity.y = -20;
+        if (enemy.velocity.y === 0) {
+          enemy.velocity.y = -17;
+        }
         break;
       case "ArrowDown":
         enemy.attack();
