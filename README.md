@@ -52,6 +52,7 @@ A pixel-art styled 2-player fighting game built using JavaScript and HTML5 Canva
 
 ## Future Enhancements
 
+- Fix bug with attacking ranges
 - Add more characters with unique abilities
 - Introduce special moves and combos
 - Implement AI for single-player mode
