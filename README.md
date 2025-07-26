@@ -61,5 +61,5 @@ A pixel-art styled 2-player fighting game built using JavaScript and HTML5 Canva
 
 ## Credits
 
-This project is based on the [JavaScript Fighting Game Tutorial with HTML Canvas](https://www.youtube.com/watch?v=vyqbNFMDRGQ&t=13476s) by [Chris Courses]
+This project is based on the [JavaScript Fighting Game Tutorial with HTML Canvas](https://www.youtube.com/watch?v=vyqbNFMDRGQ&t=13476s) by Chris Courses
 
